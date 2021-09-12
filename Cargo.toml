@@ -1,0 +1,21 @@
+[package]
+name = "distances"
+version = "0.1.0"
+authors = ["Radovan Bast <bast@users.noreply.github.com>"]
+edition = "2018"
+description = "Numerical integration grid for molecules."
+license = "MPL-2.0"
+readme = "README.md"
+homepage = "https://example.org"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[package.metadata.maturin]
+requires-python = ">=3.6"
+classifier = ["Programming Language :: Python"]
+
+[dependencies]
+rand = "0.8"
+rayon = "1.5"
+pyo3 = { version = "0.14", features = ["extension-module"] }
